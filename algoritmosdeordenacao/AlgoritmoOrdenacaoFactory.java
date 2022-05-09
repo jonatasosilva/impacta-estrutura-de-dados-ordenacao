@@ -2,8 +2,8 @@ package algoritmosdeordenacao;
 
 public class AlgoritmoOrdenacaoFactory {
 
-    public AlgoritmoOrdenacao criaAlgoritmo(String algoritmo) {
-        switch (algoritmo) {
+    public AlgoritmoOrdenacao criaAlgoritmo(String tipoAlgoritmo) {
+        switch (tipoAlgoritmo) {
             case "BubbleSort":
                 return new BubbleSort();
             case "InsertionSort":
