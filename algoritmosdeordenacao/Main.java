@@ -8,11 +8,9 @@ public class Main {
         GeraNumerosAleatorios gna = new GeraNumerosAleatorios();
 
         ArrayList<int[]> vetores = new ArrayList<>();
-        vetores.add(gna.geraNumerosAleatorios(100));
-        vetores.add(gna.geraNumerosAleatorios(1000));
-        vetores.add(gna.geraNumerosAleatorios(10000));
-        vetores.add(gna.geraNumerosAleatorios(100000));
-        // vetores.add(gna.geraNumerosAleatorios(1000000));
+        for (int i = 100; i <= 100000; i *= 10) { // TODO: mudar para 1 milhão
+            vetores.add(gna.geraNumerosAleatorios(i));
+        }
 
         exibeCiclosPorAlgoritmoPorVetor("BubbleSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("InsertionSort", vetores);
