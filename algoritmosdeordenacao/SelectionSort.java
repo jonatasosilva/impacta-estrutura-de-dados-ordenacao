@@ -1,25 +1,22 @@
 package algoritmosdeordenacao;
 
-public class SelectionSort implements AlgoritmoOrdenacao {
+public class SelectionSort extends AlgoritmoOrdenacao {
 
-    public int sort(int[] vetor) {
-        int ciclos = 0;
+    public void sort() {
         int posicao_menor, aux;
-        for (int i = 0; i < vetor.length; i++) {
-            ciclos++;
+        for (int i = 0; i < this.vetor.length; i++) {
+            this.ciclos++;
             posicao_menor = i;
-            for (int j = i + 1; j < vetor.length; j++) {
-                ciclos++;
-                if (vetor[j] < vetor[posicao_menor]) {
+            for (int j = i + 1; j < this.vetor.length; j++) {
+                this.ciclos++;
+                if (this.vetor[j] < this.vetor[posicao_menor]) {
                     posicao_menor = j;
                 }
             }
-            aux = vetor[posicao_menor];
-            vetor[posicao_menor] = vetor[i];
-            vetor[i] = aux;
-            ciclos++;
+            aux = this.vetor[posicao_menor];
+            this.vetor[posicao_menor] = this.vetor[i];
+            this.vetor[i] = aux;
         }
-        return ciclos;
     }
-    
+
 }

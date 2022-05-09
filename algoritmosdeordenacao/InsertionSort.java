@@ -1,22 +1,20 @@
 package algoritmosdeordenacao;
 
-public class InsertionSort implements AlgoritmoOrdenacao {
+public class InsertionSort extends AlgoritmoOrdenacao {
 
-    public int sort(int[] vetor) {
-        int ciclos = 0;
+    public void sort() {
         int aux, j;
-        for (int i = 1; i < vetor.length; i++) {
-            aux = vetor[i];
+        for (int i = 1; i < this.vetor.length; i++) {
+            aux = this.vetor[i];
             j = i - 1;
-            ciclos++;
-            while (j >= 0 && vetor[j] > aux) {
-                vetor[j + 1] = vetor[j];
+            this.ciclos++;
+            while (j >= 0 && this.vetor[j] > aux) {
+                this.vetor[j + 1] = this.vetor[j];
                 j--;
-                ciclos++;
+                this.ciclos++;
             }
-            vetor[j + 1] = aux;
+            this.vetor[j + 1] = aux;
         }
-        return ciclos;
     }
 
 }
