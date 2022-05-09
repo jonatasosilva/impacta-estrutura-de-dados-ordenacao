@@ -19,8 +19,8 @@ public class Main {
 
     public static void exibeCiclosPorAlgoritmoPorVetor(String tipoAlgoritmo, int[][] vetores) {
         AlgoritmoOrdenacaoFactory algoritmoFactory = new AlgoritmoOrdenacaoFactory();
-        AlgoritmoOrdenacao algoritmo = algoritmoFactory.criaAlgoritmo(tipoAlgoritmo);
         for (int[] vetor : vetores) {
+            AlgoritmoOrdenacao algoritmo = algoritmoFactory.criaAlgoritmo(tipoAlgoritmo);
             int ciclos = algoritmo.sort(vetor);
             System.out.printf("%s: %d - %d\n", tipoAlgoritmo, vetor.length, ciclos);
         }
