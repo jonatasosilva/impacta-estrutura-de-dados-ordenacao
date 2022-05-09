@@ -21,8 +21,9 @@ public class Main {
         AlgoritmoOrdenacaoFactory algoritmoFactory = new AlgoritmoOrdenacaoFactory();
         for (int[] vetor : vetores) {
             AlgoritmoOrdenacao algoritmo = algoritmoFactory.criaAlgoritmo(tipoAlgoritmo);
-            int ciclos = algoritmo.sort(vetor);
-            System.out.printf("%s: %d - %d\n", tipoAlgoritmo, vetor.length, ciclos);
+            algoritmo.setVetor(vetor);
+            algoritmo.sort();
+            System.out.printf("%s: %d - %d\n", tipoAlgoritmo, vetor.length, algoritmo.getCiclos());
         }
         System.out.println();
     }
