@@ -1,7 +1,7 @@
-
 package algoritmosdeordenacao;
 
-public class SelectionSort {
+public class SelectionSort implements AlgoritmoOrdenacao {
+
     public static int sort(int[] vetor) {
         int ciclos = 0;
         int posicao_menor, aux;
@@ -21,4 +21,5 @@ public class SelectionSort {
         }
         return ciclos;
     }
+    
 }

@@ -1,8 +1,8 @@
-
 package algoritmosdeordenacao;
 
-public class InsertionSort {
-    public static int sort(int[] vetor) {
+public class InsertionSort implements AlgoritmoOrdenacao {
+
+    public int sort(int[] vetor) {
         int ciclos = 0;
         int aux, j;
         for (int i = 1; i < vetor.length; i++) {
@@ -18,4 +18,5 @@ public class InsertionSort {
         }
         return ciclos;
     }
+
 }

@@ -1,8 +1,8 @@
 package algoritmosdeordenacao;
 
-public class BubbleSort {
+public class BubbleSort implements AlgoritmoOrdenacao {
 
-    public static int sort(int[] vetor) {
+    public int sort(int[] vetor) {
         int aux;
         int ciclos = 0;
         for (int i = 0; i < vetor.length; i++) {
@@ -19,4 +19,5 @@ public class BubbleSort {
         }
         return ciclos;
     }
+
 }
