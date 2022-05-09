@@ -2,7 +2,7 @@ package algoritmosdeordenacao;
 
 public class SelectionSort implements AlgoritmoOrdenacao {
 
-    public static int sort(int[] vetor) {
+    public int sort(int[] vetor) {
         int ciclos = 0;
         int posicao_menor, aux;
         for (int i = 0; i < vetor.length; i++) {
