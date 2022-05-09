@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class GeraNumerosAleatorios {
 
-	public int[] geraNumerosAleatorios(int quantidade) {
+	public static int[] gerar(int quantidade) {
 		int[] numerosAleatorios = new int[quantidade];
 
 		Random random = new Random();

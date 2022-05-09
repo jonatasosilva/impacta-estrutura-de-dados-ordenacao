@@ -5,11 +5,9 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        GeraNumerosAleatorios gna = new GeraNumerosAleatorios();
-
         ArrayList<int[]> vetores = new ArrayList<>();
         for (int i = 100; i <= 100000; i *= 10) { // TODO: mudar para 1 milhão
-            vetores.add(gna.geraNumerosAleatorios(i));
+            vetores.add(GeraNumerosAleatorios.gerar(i));
         }
 
         exibeCiclosPorAlgoritmoPorVetor("BubbleSort", vetores);
