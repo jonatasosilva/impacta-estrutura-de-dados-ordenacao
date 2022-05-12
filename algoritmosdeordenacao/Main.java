@@ -13,6 +13,7 @@ public class Main {
         exibeCiclosPorAlgoritmoPorVetor("BubbleSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("InsertionSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("SelectionSort", vetores);
+        exibeCiclosPorAlgoritmoPorVetor("MergeSort", vetores);
     }
 
     public static void exibeCiclosPorAlgoritmoPorVetor(String tipoAlgoritmo, ArrayList<int[]> vetores) {
