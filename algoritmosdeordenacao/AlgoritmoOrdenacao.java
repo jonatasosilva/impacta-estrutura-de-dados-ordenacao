@@ -16,7 +16,7 @@ abstract class AlgoritmoOrdenacao {
     }
 
     public void setVetor(int[] vetor) {
-        this.vetor = vetor;
+        this.vetor = vetor.clone();
     }
 
 }
