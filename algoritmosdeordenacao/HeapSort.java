@@ -1,50 +1,45 @@
-/*
- * package algoritmosdeordenacao;
- * 
- * public class HeapSort {
- * 
- * static int trocas = 0;
- * 
- * public static Resultado sort(int[] vetor){
- * //Heap Sort
- * int n = vetor.length;
- * 
- * 
- * for(int i = n / 2 - 1; i >= 0; i--){
- * aplicarHeap(vetor, n, i);
- * }
- * 
- * for(int j = n-1; j > 0; j--){
- * int aux = vetor[0];
- * vetor[0] = vetor[j];
- * vetor[j] = aux;
- * trocas++;
- * 
- * aplicarHeap(vetor, j, 0);
- * }
- * return new Resultado(vetor, trocas);
- * }
- * 
- * private static void aplicarHeap(int[] vetor, int n, int i){
- * int raiz = i;
- * int esquerda = 2*i + 1;
- * int direita = 2*i + 2;
- * 
- * if (esquerda < n && vetor[esquerda] > vetor[raiz]){
- * raiz = esquerda;
- * }
- * if (direita < n && vetor[direita] > vetor[raiz]){
- * raiz = direita;
- * }
- * 
- * if (raiz != i){
- * int aux = vetor[i];
- * vetor[i] = vetor[raiz];
- * vetor[raiz] = aux;
- * trocas++;
- * 
- * aplicarHeap(vetor, n, raiz);
- * }
- * }
- * }
- */
+package algoritmosdeordenacao;
+
+public class HeapSort extends AlgoritmoOrdenacao {
+    private void heapify(int[] array, int n, int i) {
+        int maior = i;
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
+
+        if (l < n && array[l] > array[maior]) {
+            maior = l;
+        }
+
+        if (r < n && array[r] > array[maior]) {
+            maior = r;
+        }
+
+        if (maior != i) {
+            int swap = array[i];
+            array[i] = array[maior];
+            array[maior] = swap;
+            heapify(array, n, maior);
+        }
+    }
+
+    private void heapSort(int[] array) {
+        int n = array.length;
+
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            this.ciclos += 1;
+            heapify(array, n, i);
+        }
+
+        for (int i = n - 1; i >= 0; i--) {
+            this.ciclos += 1;
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+            heapify(array, i, 0);
+        }
+    }
+
+    public void sort() {
+        heapSort(this.vetor);
+    }
+}

@@ -12,6 +12,8 @@ public class AlgoritmoOrdenacaoFactory {
                 return new SelectionSort();
             case "MergeSort":
                 return new MergeSort();
+            case "HeapSort":
+                return new HeapSort();
             default:
                 throw new IllegalArgumentException("Algoritmo desconhecido");
         }

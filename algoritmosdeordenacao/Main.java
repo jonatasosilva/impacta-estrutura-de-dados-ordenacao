@@ -14,6 +14,7 @@ public class Main {
         exibeCiclosPorAlgoritmoPorVetor("InsertionSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("SelectionSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("MergeSort", vetores);
+        exibeCiclosPorAlgoritmoPorVetor("HeapSort", vetores);
     }
 
     public static void exibeCiclosPorAlgoritmoPorVetor(String tipoAlgoritmo, ArrayList<int[]> vetores) {
