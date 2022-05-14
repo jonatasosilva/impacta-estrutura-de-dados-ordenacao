@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<int[]> vetores = new ArrayList<>();
-        for (int i = 100; i <= 100000; i *= 10) { // TODO: mudar para 1 milhão
+        for (int i = 100; i <= 1000000; i *= 10) {
             vetores.add(GeraNumerosAleatorios.gerar(i));
         }
 
@@ -15,6 +15,8 @@ public class Main {
         exibeCiclosPorAlgoritmoPorVetor("SelectionSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("MergeSort", vetores);
         exibeCiclosPorAlgoritmoPorVetor("HeapSort", vetores);
+        exibeCiclosPorAlgoritmoPorVetor("QuickSort", vetores);
+        exibeCiclosPorAlgoritmoPorVetor("ShakerSort", vetores);
     }
 
     public static void exibeCiclosPorAlgoritmoPorVetor(String tipoAlgoritmo, ArrayList<int[]> vetores) {
