@@ -2,12 +2,12 @@ package algoritmosdeordenacao;
 
 abstract class AlgoritmoOrdenacao {
 
-    protected int ciclos = 0;
+    protected long ciclos = 0;
     protected int[] vetor;
 
     abstract public void sort();
 
-    public int getCiclos() {
+    public Long getCiclos() {
         return this.ciclos;
     }
 
